@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Detection System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!--<img src="{{ url_for('static', filename='assets/img1.png') }}" class="background-image" alt="Background Image">-->
+    <div class="container">
+        <h1>Breast Cancer Detection</h1>
+        <form action="/predict" method="POST">
+            <input type="number" name="mean_radius" placeholder="Mean Radius" required>
+            <input type="number" name="mean_texture" placeholder="Mean Texture" required>
+            <input type="number" name="mean_perimeter" placeholder="Mean Perimeter" required>
+            <input type="number" name="mean_area" placeholder="Mean Area" required>
+            <input type="number" name="mean_smoothness" placeholder="Mean Smoothness" required>
+            <input type="submit" value="Predict">
+        </form>
+        <footer>
+            <p>&copy; 2024 Breast Cancer Awareness Month</p>
+            <p> By Heriz Oumaima </p>
+        </footer>
+    </div>
+</body>
+</html>
